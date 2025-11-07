@@ -1,0 +1,40 @@
+{
+  "name": "anleague2026",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clear:db": "node scripts/clearDatabase.js",
+    "clear:users": "node scripts/clearUsers.js",
+    "seed:admin": "node scripts/seedAdminOnly.js",
+    "seed:users": "node scripts/seedUsers.js",
+    "seed:teams": "node scripts/seedTeams.js",
+    "verify:users": "node scripts/verifyUsers.js",
+    "verify:teams": "node scripts/verifyTeams.js",
+    "view:users": "node scripts/viewUsers.js",
+    "generate:bracket": "node scripts/generateBracket.js",
+    "simulate:match": "node scripts/simulateMatch.js",
+    "simulate:all": "node scripts/simulateAllMatches.js",
+    "top:scorers": "node scripts/showTopScorers.js",
+    "setup:full": "npm run clear:db && npm run seed:users && npm run seed:teams && npm run generate:bracket",
+    "setup:tournament": "npm run seed:teams && npm run generate:bracket",
+    "test:ai": "node scripts/testAI.js",
+    "play:match": "node scripts/playMatch.js",
+    "api": "node api/server.js",
+    "dev": "nodemon api/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "firebase": "^12.4.0",
+    "nodemailer": "^7.0.10",
+    "openai": "^6.8.1"
+  }
+}
